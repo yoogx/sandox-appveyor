@@ -1,11 +1,10 @@
-
 install:
  - choco install gnat-gpl
  - echo C:/Projects /Projects ntfs auto 1 1 >> c:\msys64\etc\fstab
  - git clone https://github.com/OpenAADL/ocarina-build.git
 
 build_script:
- - C:\msys64\usr\bin\bash --login -c "$(cygpath ${APPVEYOR_BUILD_FOLDER})/ocarina-build/build_ocarina.sh --scenario=travis-ci"
+ - C:\cygwin64\bin\bash --login -c "$(cygpath ${APPVEYOR_BUILD_FOLDER})/ocarina-build/build_ocarina.sh --scenario=travis-ci"
 
 for:
 -
@@ -14,4 +13,3 @@ for:
       - master
   artifacts:
       - path: win32.zip
-
