@@ -4,7 +4,7 @@ install:
  - git clone https://github.com/OpenAADL/ocarina-build.git
 
 build_script:
- - C:\cygwin64\bin\bash --login -c "$(cygpath ${APPVEYOR_BUILD_FOLDER})/ocarina-build/build_ocarina.sh --scenario=travis-ci"
+ - C:\cygwin64\bin\bash --login -c "echo $PATH && $(cygpath ${APPVEYOR_BUILD_FOLDER})/ocarina-build/build_ocarina.sh --scenario=travis-ci"
 
 for:
 -
